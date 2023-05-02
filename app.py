@@ -1,3 +1,4 @@
+import sys
 import nltk
 nltk.download('popular')
 from nltk.stem import WordNetLemmatizer
@@ -65,11 +66,20 @@ def chatbot_response(msg):
     return res
 
 def cli_chatbot():
-    while(True):
-        message = input("")
-        ints = predict_class(message, model)
-        res = getResponse(ints, intents)
-        print(res)
+    flag = True
+    while(flag):
+        try:
+            message = input("")
+            if(message.upper() == "EXIT"):
+                print("It was a Please assising you! Have a great time ahead!!")
+                flag = False
+                return
+            ints = predict_class(message, model)
+            res = getResponse(ints, intents)
+            print(res)
+        except KeyboardInterrupt:
+            print("Bye")
+            sys.exit()
 
 from flask import Flask, render_template, request
 

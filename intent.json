@@ -89,9 +89,9 @@
                 "Hya there"
           ],
           "responses": [
-                "Hi human, please tell me your name",
-                "Hello human, please tell me your name",
-                "Hola human, please tell me your name"
+                "Hi Dear, please tell me your name",
+                "Hello Dear, please tell me your name",
+                "Hola Dear, please tell me your name"
           ],
           "extension":  {
                 "function": "",
